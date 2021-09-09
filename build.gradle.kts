@@ -19,6 +19,10 @@ allOpen {
 	annotation("javax.persistence.Embeddable")
 }
 
+noArg {
+	annotation("com.hoho.example.kotlinjpa2.config.NoArgsConstructor")
+}
+
 group = "com.hoho.example"
 version = "0.0.1-SNAPSHOT"
 java.sourceCompatibility = JavaVersion.VERSION_1_8
@@ -38,6 +42,7 @@ dependencies {
 	val queryDslVersion = "5.0.0"
 	implementation("com.querydsl:querydsl-jpa:$queryDslVersion")
 	kapt("com.querydsl:querydsl-apt:$queryDslVersion:jpa")
+	implementation("com.querydsl:querydsl-core:$queryDslVersion") // querydsl-jpa와 버전이 다르면 추가
 
 	implementation("org.springframework.boot:spring-boot-starter-data-jpa")
 	implementation("org.springframework.boot:spring-boot-starter-validation")
@@ -46,6 +51,7 @@ dependencies {
 	implementation("org.jetbrains.kotlin:kotlin-reflect")
 	implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
 	runtimeOnly("com.h2database:h2")
+	runtimeOnly("mysql:mysql-connector-java")
 	annotationProcessor("org.springframework.boot:spring-boot-configuration-processor")
 	testImplementation("org.springframework.boot:spring-boot-starter-test")
 

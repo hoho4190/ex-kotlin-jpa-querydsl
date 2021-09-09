@@ -5,20 +5,20 @@ import javax.persistence.*
 
 @Entity
 @DynamicUpdate
-@Table(name = "team")
-class Team(
+@Table(name = "product")
+class Product(
     @Id
     var id: Long,
 
     @Column
     var name: String,
 
-    @OneToMany(mappedBy = "team")
-    var members: MutableSet<Member> = mutableSetOf()
+    @OneToMany(mappedBy = "product")
+    var memberProducts: MutableSet<MemberProduct> = mutableSetOf()
 ) {
     override fun equals(other: Any?): Boolean {
         if (this === other) return true
-        if (other !is Team) return false
+        if (other !is Product) return false
 
         if (id != other.id) return false
 
@@ -30,6 +30,6 @@ class Team(
     }
 
     override fun toString(): String {
-        return "Team(id=$id, name='$name')"
+        return "Product(id=$id, name='$name')"
     }
 }

@@ -18,3 +18,8 @@ class JpaConfig(
         return JPAQueryFactory(entityManager)
     }
 }
+
+/**
+ * 기본 생성자가 필요한 경우 사용
+ */
+annotation class NoArgsConstructor
