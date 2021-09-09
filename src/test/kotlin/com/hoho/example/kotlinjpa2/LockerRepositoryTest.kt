@@ -1,9 +1,10 @@
-package com.hoho.example.kotlinjpa2.repository
+package com.hoho.example.kotlinjpa2
 
 import com.hoho.example.kotlinjpa2.config.JpaTestConfig
 import com.hoho.example.kotlinjpa2.entity.Locker
 import com.hoho.example.kotlinjpa2.entity.Member
 import com.hoho.example.kotlinjpa2.entity.Team
+import com.hoho.example.kotlinjpa2.repository.LockerRepository
 import org.junit.jupiter.api.Assertions
 import org.junit.jupiter.api.BeforeEach
 import org.junit.jupiter.api.DisplayName
@@ -16,7 +17,7 @@ import org.springframework.context.annotation.Import
 import org.springframework.data.repository.findByIdOrNull
 import org.springframework.test.context.ActiveProfiles
 
-@DisplayName("Locker Repository Test")
+@DisplayName("Repository Test - Locker")
 @ActiveProfiles("test")
 @DataJpaTest
 @Import(JpaTestConfig::class) // No qualifying bean of type JPAQueryFactory 에러 해결

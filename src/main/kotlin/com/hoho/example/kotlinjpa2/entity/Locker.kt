@@ -10,7 +10,7 @@ class Locker(
     @Id
     var id: Long,
 
-    @Column
+    @Column(length = 10)
     var name: String
 ) {
     override fun equals(other: Any?): Boolean {
