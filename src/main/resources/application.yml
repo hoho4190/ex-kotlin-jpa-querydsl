@@ -1,0 +1,5 @@
+spring:
+  profiles:
+    default: local
+  jackson:
+    default-property-inclusion: non_null  # JSON 응답 필드 중 null 값 제외

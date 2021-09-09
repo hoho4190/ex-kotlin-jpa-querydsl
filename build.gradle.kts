@@ -8,6 +8,13 @@ plugins {
 	kotlin("plugin.jpa") version "1.5.21"
 }
 
+// All-open for JPA
+allOpen {
+	annotation("javax.persistence.Entity")
+	annotation("javax.persistence.MappedSuperclass")
+	annotation("javax.persistence.Embeddable")
+}
+
 group = "com.hoho.example"
 version = "0.0.1-SNAPSHOT"
 java.sourceCompatibility = JavaVersion.VERSION_1_8
@@ -32,6 +39,12 @@ dependencies {
 	runtimeOnly("com.h2database:h2")
 	annotationProcessor("org.springframework.boot:spring-boot-configuration-processor")
 	testImplementation("org.springframework.boot:spring-boot-starter-test")
+
+	// logger
+	implementation("io.github.microutils:kotlin-logging-jvm:2.0.11")
+
+	// mockito-kotlin
+	testImplementation("org.mockito.kotlin:mockito-kotlin:3.2.0")
 }
 
 tasks.withType<KotlinCompile> {

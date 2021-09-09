@@ -1,0 +1,28 @@
+spring:
+  config:
+    activate:
+      on-profile:
+        - prod
+  datasource:
+    driver-class-name: org.h2.Driver
+    url: jdbc:h2:tcp://localhost/~/ex_jpa2;MODE=MYSQL;
+    username: sa
+    password:
+  jpa:
+    hibernate:
+      ddl-auto: none
+
+server:
+  port: 18081
+
+logging:
+  file:
+    name: ${env.root-path}/logs
+  level:
+    org.springframework.web: info
+    com:
+      zaxxer.hikari.HikariDataSource: error
+      hoho.example.kotlinjpa2: info
+
+env:
+  root-path: /opt/ex/kotlin-jpa2
