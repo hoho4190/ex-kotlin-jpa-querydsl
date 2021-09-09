@@ -16,7 +16,7 @@ spring:
       hibernate:
         format_sql: true          # 쿼리 예쁘게 보기
         use_sql_comments : true   # 콘솔에 표시되는 쿼리문 위에 어떤 실행을 하려는지 HINT를 표시
-#    database-platform: org.hibernate.dialect.H2Dialect  # 방언 설정, 자동으로 설정됨 따로 설정 X
+    database-platform: org.hibernate.dialect.H2Dialect
   h2:
     console:
       enabled: true

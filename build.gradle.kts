@@ -3,9 +3,13 @@ import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 plugins {
 	id("org.springframework.boot") version "2.5.4"
 	id("io.spring.dependency-management") version "1.0.11.RELEASE"
-	kotlin("jvm") version "1.5.21"
-	kotlin("plugin.spring") version "1.5.21"
-	kotlin("plugin.jpa") version "1.5.21"
+	id("com.ewerk.gradle.plugins.querydsl") version "1.0.10"
+
+	val kotlinVersion = "1.5.21"
+	kotlin("jvm") version kotlinVersion
+	kotlin("plugin.spring") version kotlinVersion
+	kotlin("plugin.jpa") version kotlinVersion
+	kotlin("kapt") version kotlinVersion
 }
 
 // All-open for JPA
@@ -30,6 +34,11 @@ repositories {
 }
 
 dependencies {
+	// queryDSL
+	val queryDslVersion = "5.0.0"
+	implementation("com.querydsl:querydsl-jpa:$queryDslVersion")
+	kapt("com.querydsl:querydsl-apt:$queryDslVersion:jpa")
+
 	implementation("org.springframework.boot:spring-boot-starter-data-jpa")
 	implementation("org.springframework.boot:spring-boot-starter-validation")
 	implementation("org.springframework.boot:spring-boot-starter-web")
