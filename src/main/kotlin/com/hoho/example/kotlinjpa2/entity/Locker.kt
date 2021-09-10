@@ -27,6 +27,6 @@ class Locker(
     }
 
     override fun toString(): String {
-        return "Locker(id=$id, name='$name')"
+        return "Locker(id=$id, name='$name', ${super.toString()})"
     }
 }

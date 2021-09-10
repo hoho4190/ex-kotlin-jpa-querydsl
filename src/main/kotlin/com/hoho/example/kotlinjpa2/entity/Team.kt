@@ -30,6 +30,6 @@ class Team(
     }
 
     override fun toString(): String {
-        return "Team(id=$id, name='$name')"
+        return "Team(id=$id, name='$name', ${super.toString()})"
     }
 }

@@ -49,6 +49,6 @@ class Member(
     }
 
     override fun toString(): String {
-        return "Member(id=$id, name='$name')"
+        return "Member(id=$id, name='$name', ${super.toString()})"
     }
 }

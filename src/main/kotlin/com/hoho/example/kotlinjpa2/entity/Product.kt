@@ -30,6 +30,6 @@ class Product(
     }
 
     override fun toString(): String {
-        return "Product(id=$id, name='$name')"
+        return "Product(id=$id, name='$name', ${super.toString()})"
     }
 }

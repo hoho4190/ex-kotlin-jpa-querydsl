@@ -55,6 +55,6 @@ class MemberProduct(
     }
 
     override fun toString(): String {
-        return "MemberProduct(id=$id, etc='$etc')"
+        return "MemberProduct(id=$id, etc='$etc', ${super.toString()})"
     }
 }

@@ -65,6 +65,7 @@ class LockerRepositoryTest(
         val locker1List = lockerRepo.findAll()
         val locker1 = lockerRepo.findByIdOrNull(mockLocker.id)    // 캐시 조회
         val locker2List = lockerRepo.findAllByName(mockLocker.name)
+        println(locker1)
 
         // then
         Assertions.assertAll(
@@ -85,6 +86,7 @@ class LockerRepositoryTest(
         // when
         val locker1List = lockerRepo.findAll()
         val locker1 = lockerRepo.findByMemberId(mockMember.id)  // 쿼리 질의(jpql은 캐시 조회 먼저 안함)
+        println(locker1)
 
         // then
         Assertions.assertAll(
@@ -105,6 +107,8 @@ class LockerRepositoryTest(
         val locker1 = lockerRepo.findByIdOrNull(mockLocker.id)  // 1차 캐시에서 조회
         lockerList[1].name = "이름 변경 2" // 커밋 시점에 업데이트 쿼리가 생겨야 하지만 jpql은 실행 전 flush 동작함
         val locker2 = lockerRepo.findByMemberId(mockMember.id).orElse(null)  // 쿼리 질의(jpql은 캐시 조회 먼저 안함)
+        println(locker1)
+        println(locker2)
 
         // then
         Assertions.assertSame(locker1, locker2)
