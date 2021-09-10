@@ -12,7 +12,7 @@ class Locker(
 
     @Column(length = 10)
     var name: String
-) {
+) : BaseEntity() {
     override fun equals(other: Any?): Boolean {
         if (this === other) return true
         if (other !is Locker) return false

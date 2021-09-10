@@ -15,7 +15,7 @@ class Product(
 
     @OneToMany(mappedBy = "product")
     var memberProducts: MutableSet<MemberProduct> = mutableSetOf()
-) {
+) : BaseEntity() {
     override fun equals(other: Any?): Boolean {
         if (this === other) return true
         if (other !is Product) return false

@@ -21,7 +21,7 @@ class MemberProduct(
     @ManyToOne(fetch = FetchType.LAZY, optional = false)
     @JoinColumn(name = "product_id", nullable = false)
     var product: Product
-) {
+) : BaseEntity() {
     fun changeMember(member: Member) {
         this.member.memberProducts.remove(this)
 

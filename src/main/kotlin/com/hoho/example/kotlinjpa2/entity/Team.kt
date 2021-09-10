@@ -15,7 +15,7 @@ class Team(
 
     @OneToMany(mappedBy = "team")
     var members: MutableSet<Member> = mutableSetOf()
-) {
+) : BaseEntity() {
     override fun equals(other: Any?): Boolean {
         if (this === other) return true
         if (other !is Team) return false

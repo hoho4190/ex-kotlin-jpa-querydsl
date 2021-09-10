@@ -23,7 +23,7 @@ class Member(
 
     @OneToMany(mappedBy = "member")
     var memberProducts: MutableSet<MemberProduct> = mutableSetOf()
-) {
+) : BaseEntity() {
     fun changeTeam(team: Team) {
         this.team.members.remove(this)
 
