@@ -7,7 +7,7 @@
 - Spring Data JPA
 - QueryDSL
 - MySQL, H2
-- JUnit5, Mokito
+- JUnit5, Mockito
 
 ## QueryDSL
 ### QueryDSL 이란?
