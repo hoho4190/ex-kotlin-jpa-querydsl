@@ -5,7 +5,7 @@ spring:
         - test
   datasource:
     driver-class-name: org.h2.Driver
-    url: jdbc:h2:mem:ex_jpa2;MODE=MYSQL;DB_CLOSE_DELAY=-1;   # DB_CLOSE_DELAY=-1: VM이 살아있는 동안 메모리 내 데이터베이스의 내용을 유지
+    url: jdbc:h2:mem:ex_jpa_querydsl;MODE=MYSQL;DB_CLOSE_DELAY=-1;   # DB_CLOSE_DELAY=-1: VM이 살아있는 동안 메모리 내 데이터베이스의 내용을 유지
     username: sa
     password:
   jpa:

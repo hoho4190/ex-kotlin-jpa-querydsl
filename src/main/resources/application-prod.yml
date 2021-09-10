@@ -5,7 +5,7 @@ spring:
         - prod
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/ex_jpa2
+    url: jdbc:mysql://localhost:3306/ex_jpa_querydsl
     username: ex
     password: expass
   jpa:
