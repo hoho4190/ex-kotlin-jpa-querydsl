@@ -32,7 +32,7 @@ logging:
     org.hibernate.type.descriptor.sql: TRACE
     com:
       zaxxer.hikari.HikariDataSource: info
-      hoho.example.kotlinjpa2: debug
+      hoho.example.jpa: debug
 
 env:
   root-path: .

@@ -1,1 +1,1 @@
-rootProject.name = "kotlin-jpa2"
+rootProject.name = "kotlin-jpa-querydsl"

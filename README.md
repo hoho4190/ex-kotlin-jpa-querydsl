@@ -80,3 +80,6 @@ JPQL은 **쿼리 실행전 flush를 호출**하여 DB와 싱크를 맞춘다.
 - [영속성 컨텍스트와 플러시 이해하기](https://ict-nroo.tistory.com/130)
 - [JPQL과 영속성 컨텍스트](https://jobc.tistory.com/206)
 - [querydsl 학습_1](https://haepyung88.tistory.com/226)
+
+## Spring initializr
+![Spring initializr](etc/ex-kotlin-jpa-querydsl.PNG)

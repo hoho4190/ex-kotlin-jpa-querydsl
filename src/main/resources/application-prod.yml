@@ -23,7 +23,7 @@ logging:
     org.springframework.web: info
     com:
       zaxxer.hikari.HikariDataSource: error
-      hoho.example.kotlinjpa2: info
+      hoho.example.jpa: info
 
 env:
-  root-path: /opt/ex/kotlin-jpa2
+  root-path: /opt/ex/kotlin-jpa-querydsl

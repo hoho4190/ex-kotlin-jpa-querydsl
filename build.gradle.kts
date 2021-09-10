@@ -20,7 +20,7 @@ allOpen {
 }
 
 noArg {
-	annotation("com.hoho.example.kotlinjpa2.config.NoArgsConstructor")
+	annotation("com.hoho.example.jpa.config.NoArgsConstructor")
 }
 
 group = "com.hoho.example"
